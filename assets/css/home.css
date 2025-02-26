@@ -1,0 +1,42 @@
+.home {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.home-div {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.home-div h1 {
+    margin-top: 24px;
+    color: #6549FF;
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.home-div h1 span {
+    color: #FFFFFF;
+}
+
+.home-div p {
+    margin-top: 8px;
+    font-size: 18px;
+    font-weight: 400;
+    max-width: 20ch;
+}
+
+.home-div a {
+    margin-top: 24px;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planeja.IA - Finalizando</title>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header-div">
+      <span>Passo 2</span>
+      <h1>Finalizando</h1>
+    </div>
+  </header>
+  <main class="form">
+    <div class="container form-div">
+      <form class="form-container">
+        <label for="dificuldade">Nível de dificuldade:</label>
+        <select id="dificuldade" name="dificuldade">
+          <option value="facil">Fácil</option>
+          <option value="moderado">Moderado</option>
+          <option value="dificil">Difícil</option>
+        </select>
+
+        <label for="objetivo">Objetivo Principal:</label>
+        <select id="objetivo" name="objetivo">
+          <option value="enem">ENEM</option>
+          <option value="vestibular">Vestibular</option>
+          <option value="concurso-publico">Concurso Público</option>
+          <option value="faculdade">Graduação</option>
+          <option value="pos-graduacao">Pós-graduação</option>
+          <option value="desenvolvimento-profissional">Desenvolvimento Profissional</option>
+        </select>
+
+        <label for="metodo">Selecione seu método de estudo:</label>
+        <select id="metodo" name="metodo">
+          <option value="pomodoro">Pomodoro</option>
+          <option value="resumos">Resumos e Mapas Mentais</option>
+          <option value="flashcards">Flashcards</option>
+          <option value="revisao-espacada">Revisão Espaçada</option>
+          <option value="estudo-ativo">Estudo Ativo</option>
+          <option value="grupos-estudo">Grupos de Estudo</option>
+        </select>
+
+        <label for="duration">Duração do Cronograma:</label>
+        <input type="text" id="duration" name="duration" placeholder="Ex: 4 semanas" required>
+        <div class="radio-div">
+          <p>Disponibilidade no fim de semana:</p>
+          <input type="radio" id="sim" name="disponibilidade" value="true">
+          <label class="radio-label" for="sim">Sim</label>
+          <input type="radio" id="nao" name="disponibilidade" value="false">
+          <label class="radio-label" for="nao">Não</label>
+        </div>
+
+
+        <button class="button" type="submit"><a href="./result.html">Prosseguir</a></button>
+      </form>
+    </div>
+  </main>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/routes.js"></script>
+
+</body>
+
+</html>

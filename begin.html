@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planeja.IA - Vamos Começar</title>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header-div">
+      <span>Passo 1</span>
+      <h1>Vamos começar</h1>
+    </div>
+  </header>
+  <main class="form">
+    <div class="container form-div">
+      <form class="form-container">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" placeholder="Nome completo" required>
+
+        <label for="time">Tempo diário disponível:</label>
+        <input type="text" id="time" name="time" placeholder="Ex: 6 horas" required>
+
+        <label for="subjects">Matérias ou Disciplinas:</label>
+        <select id="subjects" name="subjects">
+          <option value="matematica">Matemática</option>
+          <option value="fisica">Física</option>
+          <option value="historia">História</option>
+          <option value="geografia">Geografia</option>
+          <option value="portugues">Português</option>
+          <option value="gramatica">Gramática</option>
+          <option value="literatura">Literatura</option>
+          <option value="artes">Artes</option>
+          <option value="educacao-fisica">Educação Física</option>
+          <option value="biologia">Biologia</option>
+          <option value="quimica">Química</option>
+          <option value="filosofia">Filosofia</option>
+          <option value="sociologia">Sociologia</option>
+          <option value="ingles">Inglês</option>
+          <option value="espanhol">Espanhol</option>
+        </select>
+
+        <label for="duration">Duração do Cronograma:</label>
+        <input type="text" id="duration" name="duration" placeholder="Ex: 4 semanas" required>
+
+        <button class="button" type="submit"><a href="./finish.html">Prosseguir</a></button>
+        <button class="button" onclick="logout()">Sair</button>
+      </form>
+    </div>
+  </main>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/routes.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+.meus-estudos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.meus-estudos a {
+  display: flex;
+  gap: 4px;
+}
+
+.cronograma-superior {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  color: #ffffff;
+}
+
+.cronograma-superior-texto p {
+  margin-top: 36px;
+}
+
+.cronogramas {
+  background-color: white;
+  padding: 14px;
+  border-radius: 4px;
+  margin-top: 8px;
+  gap: 8px;
+}
+
+.cronograma {
+  background-color: rgba(208, 208, 208, 0.4);
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.cronograma-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.cronogramaName {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.cronograma-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.cronogramaText {
+  font-size: 16px;
+  margin-top: 8px;
+  margin-top: 14px;
+}
