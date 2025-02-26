@@ -9,28 +9,26 @@
 .button {
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  padding: 12px 24px;
+  padding: 16px 20px;
   border-radius: 8px;
   background: #6549ff;
   color: #ffffff;
   width: 100%; /* Faz com que os botões ocupem a largura total do container */
-  max-width: 200px; /* Define um tamanho fixo para todos */
+  max-width: 300px; /* Define um tamanho fixo para todos */
   text-align: center;
   cursor: pointer;
   border: none;
   font-size: 14px;
-  margin-top: 4px;
+  margin-top: 8px;
   display: flex;
   justify-content: center; /* Centraliza horizontalmente */
   align-self: center; /* Centraliza verticalmente */
 }
 
 
-
 .button:hover {
   background: #6549c1;
 }
-
 
 
 @media only screen and (max-width: 768px) {

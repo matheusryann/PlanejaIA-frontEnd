@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   // 📌 CADASTRO
-  const formCadastro = document.querySelector('.form-login');
+  const formCadastro = document.querySelector('.form-cadastro'); // Corrigido para diferenciar login e cadastro
   if (formCadastro) {
     formCadastro.addEventListener('submit', async function (event) {
       event.preventDefault();
@@ -33,13 +33,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (response.ok) {
           alert('✅ Cadastro realizado com sucesso! Agora faça login.');
-          window.location.href = 'login.html'; // Redireciona para login
+          window.location.href = 'login.html';
         } else {
-          let erroMsg = '❌ Erro ao cadastrar. ';
-          for (const key in data) {
-            erroMsg += `\n${key}: ${data[key]}`;
-          }
-          alert(erroMsg);
+          alert('❌ Erro ao cadastrar: ' + (data.error || 'Tente novamente.'));
         }
       } catch (error) {
         console.error('Erro no cadastro:', error);
@@ -54,9 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
     formLogin.addEventListener('submit', async function (event) {
       event.preventDefault();
 
-      const loginInput =
-        document.getElementById('login')?.value.trim() ||
-        document.getElementById('email')?.value.trim();
+      const loginInput = document.getElementById('login')?.value.trim();
       const password = document.getElementById('password')?.value;
 
       if (!loginInput || !password) {
@@ -64,15 +58,11 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
       }
 
-      const requestBody = loginInput.includes('@')
-        ? { email: loginInput, password }
-        : { username: loginInput, password };
-
       try {
         const response = await fetch('http://localhost:8000/api/login/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(requestBody),
+          body: JSON.stringify({ login: loginInput, password }),
         });
 
         const data = await response.json();
@@ -81,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (response.ok) {
           alert('✅ Login realizado com sucesso!');
           localStorage.setItem('token', data.token);
-          window.location.href = 'index.html'; // Redireciona para a página principal
+          window.location.href = 'index.html';
         } else {
           alert(
             '❌ Erro ao fazer login: ' +
@@ -100,9 +90,9 @@ document.addEventListener('DOMContentLoaded', function () {
   if (botaoLogout) {
     botaoLogout.addEventListener('click', function (event) {
       event.preventDefault();
-      localStorage.removeItem('token'); // 🔄 Remove o token de login
+      localStorage.removeItem('token');
       alert('👋 Você saiu da conta.');
-      window.location.href = 'login.html'; // 🔄 Redireciona para a tela de login
+      window.location.href = 'login.html';
     });
   }
 });
